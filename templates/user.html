@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+
+<body>
+    <div class="container">
+      <h1>Welcome to Fashion Hub!</h1>
+      <br>
+      <p>Click <a href="/">here</a> to go home.</p>
+    </div>
+
+
+<div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <form action="{{url_for('add_user')}}" method="POST">
+                    {% if error %}
+                        <p class=error><strong>Error:</strong> {{ error }}
+                    {% endif %}
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">EmployeeName</span>
+                        <input type="text" class="form-control" name="employeeName" id="empName" aria-describedby="basic-addon3">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">Password</span>
+                        <input type="text" class="form-control" id="pass" name="password" aria-describedby="basic-addon3">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">DepartmentId</span>
+                        <input type="text" class="form-control" id="DepartmentId" name="departmentId" aria-describedby="basic-addon3">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">Designation</span>
+                        <input type="text" class="form-control" id="Designation" name="designation" aria-describedby="basic-addon3">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">EmailId</span>
+                        <input type="text" class="form-control" id="EmailId" name="emailId" aria-describedby="basic-addon3">
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">Phone</span>
+                        <input type="text" class="form-control" id="Phone" name="phone" aria-describedby="basic-addon3">
+                    </div>
+                    <br>
+                    <input type="Submit" value="Submit" class="btn btn-default btn-sm">
+                </form>
+            </div>
+        </div>
+</body>
+</html>
